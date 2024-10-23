@@ -1,0 +1,147 @@
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border-radius: 10px;
+  min-height: 100vh;
+  margin: 3.7rem;
+  padding-top: 5rem;
+}
+
+.design-heading {
+  font-size: 3.5rem;
+  margin-bottom: 10rem;
+  text-align: center;
+  color: white;
+  letter-spacing: 6px;
+  font-weight: 600;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content {
+  position: relative;
+  top: -45%;
+  list-style: none;
+  padding: 20px;
+  background: #1f1f1f;
+  -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+  box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+  border-radius: 5px;
+  color: white;
+  padding: 1.75rem;
+  transition: 0.4s ease;
+  min-width: 25vw;
+  margin: 1rem;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.timeline-component {
+  margin: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(310deg,
+        hsl(273deg 100% 16%) 0%,
+        hsl(273deg 100% 22%) 8%,
+        hsl(273deg 100% 27%) 15%,
+        hsl(273deg 100% 32%) 21%,
+        hsl(273deg 100% 38%) 25%,
+        hsl(273deg 100% 44%) 29%,
+        hsl(273deg 100% 50%) 33%,
+        hsl(271deg 100% 64%) 36%,
+        hsl(272deg 100% 72%) 38%,
+        hsl(274deg 100% 79%) 41%,
+        hsl(276deg 100% 86%) 42%,
+        hsl(277deg 100% 93%) 44%,
+        hsl(0deg 0% 100%) 46%,
+        hsl(275deg 77% 92%) 47%,
+        hsl(274deg 75% 83%) 49%,
+        hsl(273deg 74% 75%) 50%,
+        hsl(272deg 73% 66%) 52%,
+        hsl(270deg 72% 57%) 54%,
+        hsl(272deg 100% 43%) 57%,
+        hsl(273deg 100% 39%) 60%,
+        hsl(273deg 100% 36%) 64%,
+        hsl(274deg 100% 33%) 69%,
+        hsl(274deg 100% 30%) 76%,
+        hsl(275deg 100% 27%) 85%,
+        hsl(275deg 100% 25%) 100%);
+    background-size: 100% 400%;
+    animation: gradientFlow 8s linear infinite;
+    width: 3px;
+    height: 100%;
+    margin-bottom: 10rem;
+  }
+
+  @keyframes gradientFlow {
+    0% {
+      background-position: 50% 0%;
+    }
+
+    100% {
+      background-position: 50% 400%;
+    }
+  }
+
+
+
+  .main-middle {
+    opacity: 0;
+  }
+
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: radial-gradient(circle, #650276, #7b4295, #946eb1, #af9acb, #cec5e3, #cec5e2, #cfc5e2, #cfc5e1, #b19ac8, #976ead, #80428e, #6a016e);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  
+  .timeline-circle::before{
+    content: '';
+    position: absolute;
+    top: 51%;
+    left: 51%;
+    background-color: rgba(57, 4, 110, 0.39);
+    transform: translate(-50%, -50%);
+    
+    border-radius: 50%;
+    width: 130%;
+    height: 130%;
+    animation: blinker 1s linear infinite;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+}

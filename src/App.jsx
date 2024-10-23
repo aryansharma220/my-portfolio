@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Education from './components/Education';
+import Contact from './components/Contact';
+import Footer from './components/Footer'
+import Experience from './components/Experience';
 
 function App() {
   const [auraPosition, setAuraPosition] = useState({ x: 0, y: 0 });
@@ -62,8 +68,7 @@ function App() {
         </div>
       ) : (
         <main style={{ position: 'relative', minHeight: '100vh' }}>
-          <div className="bg-mesh" />
-          <div className="bg-dots fade-in">
+          <div className="fade-in">
             <div
               className="bg-aura-effect"
               onMouseEnter={handleMouseEnter}
@@ -90,6 +95,12 @@ function App() {
               )}
               <Navbar />
               <Hero />
+              <Projects />
+              <Skills />
+              <Experience />
+              <Education />
+              <Contact />
+              <Footer />
             </div>
           </div>
         </main>
