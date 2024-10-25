@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.79);
   border: none;
   /* padding-bottom: 0; */
   overflow: hidden;
@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
   
 }
 

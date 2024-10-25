@@ -39,7 +39,7 @@ const Skills = () => {
 
   return (
     <div id='skills' className='skills-section'>
-      <h2>Skills</h2>
+      <h2 className='skills-heading'>Skills</h2>
       <div className='skills-container'>
         <ul className='skills-list'>
           {skills.map((skill, index) => (

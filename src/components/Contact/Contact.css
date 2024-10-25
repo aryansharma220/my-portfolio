@@ -1,0 +1,372 @@
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 1rem;
+  margin: 4rem 3rem;
+}
+
+.otherInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.globe{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border-radius: 10px;
+  color: white;
+  max-width: 30vw;
+  min-width: 30vw;
+  min-height: 40vh;
+
+  /* opacity:0.4; */
+}
+
+.globeText{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 20vw;
+  opacity: 1;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.space{
+  background:rgba(0, 0, 0, 0.356) url(http://fc01.deviantart.net/fs71/f/2012/160/b/9/stars_by_paulinemoss-d52un4e.jpg);
+  animation: stars 205s linear infinite;
+  background-size:auto;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#box {
+  background:url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/earth-2.jpg);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:200px;
+  height:200px;
+  animation: rotate 5s linear 0s infinite;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  margin:6em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+  /* opacity: 0.9; */
+}
+
+@keyframes rotate {
+  0% { background-position:0 0 }
+  100% { background-position:355px 0 }
+}
+
+@keyframes stars {
+  0% { background-position:0 0 }
+  100% { background-position:0 100% }
+}
+
+.emailCopy{
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border-radius: 10px;
+  color: white;
+  /* padding: 2rem; */
+  min-width: 30vw;
+  max-width: 30vw;
+  min-height: 35vh;
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border-radius: 10px;
+  min-height: 70vh;
+  color: white;
+  padding: 1rem;
+}
+
+
+.contact-form h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 3.4rem;
+  letter-spacing: 6px;
+}
+
+.contact-form p {
+  font-size: 1.2rem;
+  padding: 0 8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  letter-spacing: 1.3px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: transparent;
+  padding: .3rem;
+  margin-bottom: 1rem;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  min-width: 20vw;
+}
+
+
+
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.notification.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.notification.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+
+.outer {
+  width: 30vw;
+  height: 35vh;
+  border-radius: 10px;
+  padding: .1rem;
+  background: radial-gradient(circle 230px at 0% 0%, #ffffff, #0c0d0d);
+  position: relative;
+}
+
+.dot {
+  width: 5px;
+  aspect-ratio: 1;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 10px #ffffff;
+  border-radius: 100px;
+  z-index: 2;
+  right: 10%;
+  top: 10%;
+  animation: moveDot 6s linear infinite;
+}
+
+@keyframes moveDot {
+  0%, 100% {
+    top: 10%;
+    right: 10%;
+  }
+  25% {
+    top: 10%;
+    right: 89%; /* Moves to the opposite side */
+  }
+  50% {
+    top: 89%; 
+    right: 89%;
+  }
+  75% {
+    top: 89%;
+    right: 10%;
+  }
+}
+
+
+.email-card {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+  border: solid 1px #202222;
+  background-size: 20px 20px;
+  background: radial-gradient(circle 280px at 0% 0%, #444444, #0c0d0d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  color: #fff;
+}
+.ray {
+  width: 220px;
+  height: 45px;
+  border-radius: 100px;
+  position: absolute;
+  background-color: #c7c7c7;
+  opacity: 0.4;
+  box-shadow: 0 0 50px #fff;
+  filter: blur(10px);
+  transform-origin: 10%;
+  top: 0%;
+  left: 0;
+  transform: rotate(40deg);
+}
+
+.emaial-card .text {
+  font-weight: bolder;
+  font-size: 4rem;
+  background: linear-gradient(45deg, #000000 4%, #fff, #000);
+  background-clip: text;
+  color: transparent;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #2c2c2c;
+}
+.topl {
+  top: 10%;
+  background: linear-gradient(90deg, #888888 30%, #1d1f1f 70%);
+}
+.bottoml {
+  bottom: 10%;
+}
+.leftl {
+  left: 10%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, #747474 30%, #222424 70%);
+}
+.rightl {
+  right: 10%;
+  width: 1px;
+  height: 100%;
+}
+
+
+.email-text{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+
+.email-button{
+  animation: bounceInDown 900ms 200ms ease-in-out both;
+  text-decoration: none;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  z-index: 990;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.email-button:not(.active) {
+  box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #170c22,
+    0 2px 1px 0 rgba(59, 58, 59, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.2);
+  	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+  text-shadow: 0 0 21px rgba(223, 206, 228, 0.5),
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.email-button:not(.active):active {
+  color: #e4e3ce !important;
+}
+
+.email-button.active,
+.email-button:active {
+  box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #170c22,
+    0 2px 1px 0 rgba(59, 58, 59, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.2);
+  background-image: linear-gradient(#151515, #2a2a2a);
+  text-shadow: 0 0 21px rgba(223, 206, 228, 0.5),
+    0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
+  color: #e4e3ce;
+}
+
+.email-button.active:before,
+.email-button :active:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1px;
+  height: 100%;
+  top: 1px;
+  left: -2px;
+  background-image: linear-gradient(
+    rgba(91, 35, 105, 0),
+    #3e3e3e 41%,
+    #2e2e2e 59%,
+    rgba(91, 35, 105, 0)
+  );
+  box-shadow: -2px 0 6px 0 #5b5b5b;
+}

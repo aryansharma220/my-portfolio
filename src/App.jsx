@@ -1,23 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Education from './components/Education';
-import Contact from './components/Contact';
-import Footer from './components/Footer'
-import Experience from './components/Experience';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills';
+import Education from './components/Education/Education';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+import MyApproach from './components/MyApproach/MyApproach';
+import Loading from './elements/Loader/Loading';
 
 function App() {
-  const [auraPosition, setAuraPosition] = useState({ x: 0, y: 0 });
   const [showAura, setShowAura] = useState(false);
-  const [loading, setLoading] = useState(true); // State for loader
+  const [loading, setLoading] = useState(true); 
   const auraRef = useRef(null);
   const requestRef = useRef(null);
 
-
   useEffect(() => {
-
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -53,19 +51,7 @@ function App() {
   return (
     <>
       {loading ? (
-
-        <div className='loaderStyle'>
-          <div className="orbital">
-            <div className="ringOne"></div>
-            <div className="ringTwo"></div>
-            <div className="ringThree"></div>
-            <div className="core"></div>
-            <div className="spin"></div>
-          </div>
-          <div className="loader">
-            <span className="loader-text">Loading...</span>
-          </div>
-        </div>
+        <Loading />
       ) : (
         <main style={{ position: 'relative', minHeight: '100vh' }}>
           <div className="fade-in">
@@ -97,7 +83,7 @@ function App() {
               <Hero />
               <Projects />
               <Skills />
-              <Experience />
+              <MyApproach />
               <Education />
               <Contact />
               <Footer />
@@ -108,6 +94,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;

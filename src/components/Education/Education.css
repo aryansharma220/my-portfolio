@@ -6,7 +6,7 @@
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   border-radius: 10px;
   min-height: 100vh;
-  margin: 3.7rem;
+  margin: 0 3.7rem;
   padding-top: 5rem;
 }
 
@@ -28,7 +28,6 @@
 .timeline {
   width: 80%;
   height: auto;
-  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
