@@ -36,12 +36,23 @@ const Navbar = () => {
           </div>
         </div>
 
+        {/* Mobile menu button */}
+        <button className="mobile-menu-btn" onClick={toggleMenu}>
+          {isMenuOpen ? (
+            <X className="h-6 w-6 text-white" />
+          ) : (
+            <Menu className="h-6 w-6 text-white" />
+          )}
+        </button>
+
         {/* Desktop navigation */}
-        <div className="nav-links">
+        <div className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
           <ul className="nav-ul">
             {menuItems.map((item, index) => (
               <li className="nav-ul-li" key={index}>
-                <a className="a-shine" href={item.link}>{item.title}</a>
+                <a className="a-shine" href={item.link} onClick={closeMenu}>
+                  {item.title}
+                </a>
               </li>
             ))}
           </ul>

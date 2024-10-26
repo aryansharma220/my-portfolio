@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Alegreya", serif; 
+  scroll-behavior: smooth;
 }
 
 body {
@@ -31,7 +32,6 @@ body {
   background-size: cover;
   overflow-y: scroll;
   overflow-x:hidden;
-  scroll-behavior: smooth;
 }
 
 /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
@@ -237,3 +237,9 @@ body {
   box-shadow: 0 0.5em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
 }
 
+
+@media screen and (max-width: 800px) {
+  .bg-aura-effect .aura-element{
+    display: none;
+  }
+}
