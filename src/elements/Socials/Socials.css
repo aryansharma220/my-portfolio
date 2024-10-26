@@ -387,6 +387,11 @@
 
 @media screen and (max-width: 550px) {
   .socials{
-    width: 70%;
+    /* width: 70%; */
+  }
+
+  .icons{
+    column-gap: 0.6rem;
+    row-gap: 0.6rem;
   }
 }
