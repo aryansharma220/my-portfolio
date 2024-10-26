@@ -7,7 +7,7 @@ import './Hero.css';
 
 const heroButtons = [
   {
-    href: "../../public/Resume.pdf",
+    href: "/Resume.pdf",
     text: "Download My Resume",
     icon: <BsDownload />
   },
