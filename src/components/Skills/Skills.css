@@ -111,6 +111,6 @@
 
 @media screen and (max-width: 550px) {
   .skills-section{
-    margin: 1rem;
+    margin: 0;
   }
 }
