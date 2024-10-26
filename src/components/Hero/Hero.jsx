@@ -23,7 +23,7 @@ const Hero = () => {
     <div id='home' className="hero-section">
       <div className="hero-left-section">
         <h1 className="hero-heading animate-charcter">Welcome to Artisan Cove</h1>
-        <h2 className="hero-subheading">Crafted by Aryan Sharma</h2>
+        <h2 className="hero-subheading"><span>Crafted by Aryan Sharma</span></h2>
         <p className='hero-para'>
           Hello! I'm <b>Aryan Sharma</b>, a <b>full stack developer</b> and <b>designer</b> navigating the seas of technology. 
           Explore my creations and embark on a journey through my portfolio! 

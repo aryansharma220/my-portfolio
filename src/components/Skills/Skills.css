@@ -6,7 +6,7 @@
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   border-radius: 10px;
-  min-height: 70vh;
+  /* min-height: 70vh; */
   color: white;
   padding: 1rem;
   margin: 3.7rem;
@@ -92,4 +92,25 @@
 .blur {
   filter: blur(5px);
   transform: scale(0.9);
+}
+
+
+@media screen and (max-width: 800px) {
+  .skills-item{
+    font-size: .5rem;
+  }
+
+  .skills-item svg {
+    font-size: 1.5rem;
+  }
+
+  .skills-heading{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .skills-section{
+    margin: 1rem;
+  }
 }

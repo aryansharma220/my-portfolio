@@ -79,7 +79,7 @@ function App() {
                   }}
                 />
               )}
-              <Navbar />
+              {/* <Navbar /> */}
               <Hero />
               <Projects />
               <Skills />

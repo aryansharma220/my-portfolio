@@ -7,23 +7,23 @@
   background-color: #161616;
   border-radius: 10px;
   width: 100%;
-  max-width: 300px;
+  /* width: 100%; */
 }
 
-.social-social-card {
+/* .social-social-card {
   min-width: 3rem;
-}
+} */
 
-.hero-left-section,
+/* .hero-left-section,
 .hero-right-section {
   width: 100%; 
   max-width: 100%;  
-}
+} */
 
 
 .social-card {
   position: relative;
-  width: 23rem;
+  width: 25rem;
   min-height: 10rem;
   display: flex;
   border-radius: 10px;
@@ -273,7 +273,6 @@
   opacity: 0;
 }
 
-/* Specific colors for each platform */
 .instagram:hover{
   color: #cc39a4;
 }
@@ -296,7 +295,6 @@
   color: #2026D2;
 }
 
-/* Animation delays for shooting star effect */
 .instagram::before {
   top: -700%;
   left: 1050%;
@@ -384,5 +382,11 @@
 
   100% {
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .socials{
+    width: 70%;
   }
 }

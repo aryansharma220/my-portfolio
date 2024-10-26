@@ -41,7 +41,7 @@ const Education = () => {
           <p>2022 - 2026 (Ongoing...)</p>
         </div>
       </div>
-      <p style={{color: 'white', textAlign: 'center', fontSize: '1.5rem',paddingBottom: '1rem'}}>Long way to go ahead...</p>
+      <p className='journey' style={{color: 'white', textAlign: 'center', fontSize: '1.5rem',paddingBottom: '1rem'}}>Long way to go ahead...</p>
     </section>
   )
 }
