@@ -20,7 +20,7 @@ const heroButtons = [
 
 const Hero = () => {
   return (
-    <div id='home' className="hero-section">
+    <div data-aos='zoom-in-left' id='home' className="hero-section">
       <div className="hero-left-section">
         <h1 className="hero-heading animate-charcter">Welcome to Artisan Cove</h1>
         <h2 className="hero-subheading"><span>Crafted by Aryan Sharma</span></h2>
@@ -41,7 +41,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-right-section">
-        <div className="image-container">
+        <div data-aos="zoom-out-right" className="image-container">
           <img src={ProfileImage} alt="Aryan Sharma" className="profile-image" />
           <div className="image-name">Aryan Sharma</div>
           <div className="image-profession">Full Stack Developer</div>

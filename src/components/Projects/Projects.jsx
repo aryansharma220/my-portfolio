@@ -28,9 +28,9 @@ const projectData = [
 
 const Projects = () => {
   return (
-    <div id='projects' className="projects-section">
+    <div data-aos='zoom-out-up' id='projects' className="projects-section">
       <h2 className='project-heading'>Projects</h2>
-      <div className="projects">
+      <div className="projects" data-aos= 'zoom-in-up' >
         {projectData.map(project => (
           <div key={project.id} className="project-card">
             <div>

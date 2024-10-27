@@ -57,7 +57,7 @@
   overflow: hidden;
   text-align: center;
   border-right: solid 5px rgba(97, 27, 171, 0.75);
-  animation: animated-text 2s linear 1s 1 normal both,
+  animation: animated-text 1s linear 1s 1 normal both,
     animated-cursor 600ms linear infinite;
 
 }

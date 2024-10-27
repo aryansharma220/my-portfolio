@@ -111,6 +111,11 @@
 
 @media screen and (max-width: 550px) {
   .skills-section{
-    margin: 0;
+    margin: 2rem 0;
+  }
+
+  .skills-heading{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 }

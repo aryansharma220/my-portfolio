@@ -5,18 +5,17 @@
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   border-radius: 10px;
-  /* min-height: 100vh; */
   margin: 0 3.7rem;
   padding-top: 5rem;
 }
 
 .design-heading {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 10rem;
   text-align: center;
   color: white;
   letter-spacing: 6px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .design {
@@ -106,8 +105,6 @@
     }
   }
 
-
-
   .main-middle {
     opacity: 0;
   }
@@ -148,6 +145,7 @@
 @media screen and (max-width: 768px) {
   .design-heading{
     font-size: 2rem;
+    margin-bottom: 2rem;
   }
   .journey{
     display: none;
@@ -156,7 +154,8 @@
 
 @media screen and (max-width: 550px) {
   .design-heading{
-    font-size: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
     /* margin-top: .5rem; */
     margin-bottom: 2rem;
   }
@@ -167,6 +166,8 @@
   
   .design-section{
     padding-top: 1rem;
-    margin: 0;
+    margin: 2rem 0;
   }
+
+  
 }

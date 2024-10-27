@@ -39,7 +39,7 @@ const socialLinks = [
 
 const Socials = () => {
   return (
-    <div className="socials">
+    <div data-aos="zoom-out-right" className="socials">
       <div className="social-card">
         <div className="heading">My Socials</div>
         <div className="icons">

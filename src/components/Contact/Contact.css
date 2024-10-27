@@ -135,7 +135,8 @@
 
 .notification {
   position: fixed;
-  top: 20px;
+  /* top: 20px; */
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 20px;
@@ -143,7 +144,9 @@
   border-radius: 4px;
   text-align: center;
   font-size: 16px;
-  z-index: 1000;
+  z-index: 100000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.6;
 }
 
 .notification.success {
@@ -188,7 +191,7 @@
   }
   25% {
     top: 10%;
-    right: 89%; /* Moves to the opposite side */
+    right: 89%;
   }
   50% {
     top: 89%; 
@@ -394,11 +397,30 @@
   
 }
 
+@media screen and (max-width: 750px) {
+  .text{
+    font-size: 0.9rem;
+  }
+  .email-button{
+    font-size: .8rem;
+  }
+}
 
 @media screen and (max-width: 550px) {
   .contact-section{
     margin: 0;
     padding: 0;
   }
+
+  .contact-form h1{
+    font-size: 1.5rem;
+  }
+
+  .contact-form p{
+    font-size: .8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
 
 }

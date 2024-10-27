@@ -8,12 +8,26 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import MyApproach from './components/MyApproach/MyApproach';
 import Loading from './elements/Loader/Loading';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 function App() {
   const [showAura, setShowAura] = useState(false);
   const [loading, setLoading] = useState(true); 
   const auraRef = useRef(null);
   const requestRef = useRef(null);
+
+  useEffect(() => {
+    const isMobile = () => window.innerWidth < 768;
+  
+    if (!isMobile()) {
+      AOS.init();
+    } else {
+      const elements = document.querySelectorAll('[data-aos]');
+      elements.forEach(el => el.removeAttribute('data-aos'));
+    }
+  }, []);
+  
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -80,12 +94,12 @@ function App() {
                 />
               )}
               <Navbar />
-              <Hero />
-              <Projects />
-              <Skills />
-              <MyApproach />
-              <Education />
-              <Contact />
+              <Hero  />
+              <Projects  />
+              <Skills  />
+              <MyApproach  />
+              <Education  />
+              <Contact  />
               <Footer />
             </div>
           </div>

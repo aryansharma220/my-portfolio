@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
 import logo from '../../Assets/LogoWithoutBg.webp';
 import './Navbar.css';
 
@@ -26,7 +25,7 @@ const Navbar = () => {
 
   return (
     <div className="header">
-      <div className="navbar">
+      <div data-aos='fade-up' className="navbar">
         <div className="logo-div">
           <div className="logo">
             <a href="#">
@@ -36,14 +35,20 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile menu button */}
-        <button className="mobile-menu-btn" onClick={toggleMenu}>
-          {isMenuOpen ? (
-            <X className="h-6 w-6 text-white" />
-          ) : (
-            <Menu className="h-6 w-6 text-white" />
-          )}
-        </button>
+        {/* Mobile menu toggle */}
+        <div className="menu-toggle-container">
+          <input 
+            type="checkbox" 
+            id="checkbox" 
+            checked={isMenuOpen}
+            onChange={toggleMenu}
+          />
+          <label htmlFor="checkbox" className="toggle">
+            <div className="bars" id="bar1"></div>
+            <div className="bars" id="bar2"></div>
+            <div className="bars" id="bar3"></div>
+          </label>
+        </div>
 
         {/* Desktop navigation */}
         <div className={`nav-links ${isMenuOpen ? 'show' : ''}`}>

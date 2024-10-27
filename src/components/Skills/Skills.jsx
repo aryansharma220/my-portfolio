@@ -38,10 +38,10 @@ const Skills = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div id='skills' className='skills-section'>
+    <div data-aos='zoom-out-down' id='skills' className='skills-section'>
       <h2 className='skills-heading'>Skills</h2>
       <div className='skills-container'>
-        <ul className='skills-list'>
+        <ul data-aos="zoom-out-right" className='skills-list'>
           {skills.map((skill, index) => (
             <li
               className={`skills-item ${hoveredIndex !== null && hoveredIndex !== index ? 'blur' : ''}`}

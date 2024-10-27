@@ -3,7 +3,7 @@ import './Education.css'
 
 const Education = () => {
   return (
-    <section id='education' className="design-section">
+    <section data-aos='zoom-out-down' id='education' className="design-section">
       <h2 className="design-heading">My Education Timeline</h2>
       <div className="timeline">
         <div className="timeline-empty"></div>
@@ -12,13 +12,13 @@ const Education = () => {
           <div className="timeline-circle"></div>
         </div>
 
-        <div className="timeline-component timeline-content">
+        <div className="timeline-component timeline-content" data-aos="zoom-out-right">
           <h3>Secondary School</h3>
           <p>Bharti Public School</p>
           <p>2019</p>
         </div>
 
-        <div className="timeline-component timeline-content">
+        <div className="timeline-component timeline-content" data-aos="zoom-out-left">
           <h3>Higher Secondary School</h3>
           <p>Bharti Public School</p>
           <p>2021</p>
@@ -35,7 +35,7 @@ const Education = () => {
           <div className="timeline-circle"></div>
         </div>
 
-        <div className="timeline-component timeline-content">
+        <div className="timeline-component timeline-content" data-aos="zoom-out-right">
           <h3>B. Tech in Computer Science</h3>
           <p>VIT Bhopal University</p>
           <p>2022 - 2026 (Ongoing...)</p>

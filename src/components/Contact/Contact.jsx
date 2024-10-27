@@ -64,19 +64,19 @@ const Contact = () => {
     setNotification({ message, type, visible: true });
     setTimeout(() => {
       setNotification({ message: '', type: '', visible: false });
-    }, 4000);
+    }, 2000);
   };
 
   return (
-    <div id='contact' className='contact-section'>
-      <div className="otherInfo">
+    <div data-aos='zoom-out-up' id='contact' className='contact-section'>
+      <div data-aos="zoom-out-right" className="otherInfo">
         <div className="globe">
           <p className='globeText'>I'm very flexible with time zone communication and open to remote work worldwide.</p>
           <div className='space'>
             <div id="box"></div>
           </div>
         </div>
-        <div className="emailCopy">
+        <div data-aos="zoom-out-right" className="emailCopy">
           <div className="outer">
             <div className="dot"></div>
             <div className="email-card">
@@ -95,7 +95,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className='contact-form'>
+      <div data-aos="zoom-out-left" className='contact-form'>
         <h1>Let's Talk</h1>
         <p>
           Whether you're looking to build a new website, improve your existing platform, or bring a unique idea to life, I'm here to help.
