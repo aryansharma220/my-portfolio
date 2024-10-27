@@ -9,7 +9,7 @@ const Footer = () => {
         <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#">Home</a></li>
         <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#projects">Projects</a></li>
         <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#skills">Skills</a></li>
-        <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#experience">Experience</a></li>
+        <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#myApproach">My Approach</a></li>
         <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#education">Education</a></li>
         <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#contact">Contact</a></li>
       </ul>

@@ -148,8 +148,19 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .card-footer{
-    font-size: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .approach-card{
+    height: 30vh;
+  }
+
+}
+
+@media screen and (max-width: 300px) {
+  .card-footer{
+    font-size: 0.7rem;
   }
 }
