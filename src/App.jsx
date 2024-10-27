@@ -17,17 +17,6 @@ function App() {
   const auraRef = useRef(null);
   const requestRef = useRef(null);
 
-  useEffect(() => {
-    const isMobile = () => window.innerWidth < 768;
-  
-    if (!isMobile()) {
-      AOS.init();
-    } else {
-      const elements = document.querySelectorAll('[data-aos]');
-      elements.forEach(el => el.removeAttribute('data-aos'));
-    }
-  }, []);
-  
 
   useEffect(() => {
     const timer = setTimeout(() => {
