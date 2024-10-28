@@ -101,11 +101,11 @@ const Contact = () => {
           Whether you're looking to build a new website, improve your existing platform, or bring a unique idea to life, I'm here to help.
         </p>
         <form onSubmit={handleSubmit}>
-          <label>Full Name</label>
+          <label htmlFor='name'>Full Name</label>
           <input type="text" name="name" value={form.name} required onChange={handleChange} />
-          <label>Your Email</label>
+          <label htmlFor='email'>Your Email</label>
           <input type="email" name="email" value={form.email} required onChange={handleChange} />
-          <label>Message For Me</label>
+          <label htmlFor='message'>Message For Me</label>
           <textarea name="message" rows="5" value={form.message} required placeholder="Hi, I am interested in...." onChange={handleChange} />
           <button className='button' type="submit" disabled={loading}>
             <span >

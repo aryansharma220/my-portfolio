@@ -169,10 +169,13 @@
   }
 
   .project-card-button{
-    padding: 0.3rem;
+    padding: 0.6rem;
     opacity: 1;
     transform: translate(-50%, -100%);
+  }
 
+  .project-card-button a span{
+    font-size: 1rem;
   }
 
   .project-link{

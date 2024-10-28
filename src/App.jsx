@@ -1,55 +1,40 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, Suspense } from 'react';
 import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
-import Projects from './components/Projects/Projects';
-import Skills from './components/Skills/Skills';
-import Education from './components/Education/Education';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
-import MyApproach from './components/MyApproach/MyApproach';
 import Loading from './elements/Loader/Loading';
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
+
+// Lazy load components
+const Hero = React.lazy(() => import('./components/Hero/Hero'));
+const Projects = React.lazy(() => import('./components/Projects/Projects'));
+const Skills = React.lazy(() => import('./components/Skills/Skills'));
+const Education = React.lazy(() => import('./components/Education/Education'));
+const Contact = React.lazy(() => import('./components/Contact/Contact'));
+const Footer = React.lazy(() => import('./components/Footer/Footer'));
+const MyApproach = React.lazy(() => import('./components/MyApproach/MyApproach'));
 
 function App() {
+  const [loading, setLoading] = useState(true);
   const [showAura, setShowAura] = useState(false);
-  const [loading, setLoading] = useState(true); 
   const auraRef = useRef(null);
-  const requestRef = useRef(null);
 
-
+  // Simulate a loading screen delay
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
-  const handleMouseEnter = () => {
-    setShowAura(true);
-  };
+  const handleMouseEnter = () => setShowAura(true);
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-
-    if (requestRef.current) {
-      cancelAnimationFrame(requestRef.current);
+    if (auraRef.current) {
+      auraRef.current.style.top = `${y}px`;
+      auraRef.current.style.left = `${x}px`;
     }
-
-    requestRef.current = requestAnimationFrame(() => {
-      if (auraRef.current) {
-        auraRef.current.style.top = `${y}px`;
-        auraRef.current.style.left = `${x}px`;
-      }
-    });
   };
 
-  const handleMouseLeave = () => {
-    setShowAura(false);
-  };
+  const handleMouseLeave = () => setShowAura(false);
 
   return (
     <>
@@ -83,13 +68,15 @@ function App() {
                 />
               )}
               <Navbar />
-              <Hero  />
-              <Projects  />
-              <Skills  />
-              <MyApproach  />
-              <Education  />
-              <Contact  />
-              <Footer />
+              <Suspense fallback={<div>Loading content...</div>}>
+                <Hero />
+                <Projects />
+                <Skills />
+                <MyApproach />
+                <Education />
+                <Contact />
+                <Footer />
+              </Suspense>
             </div>
           </div>
         </main>

@@ -3,19 +3,24 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./src/Assets/PortfolioLogo.webp" />
+  <link rel="icon" type="image/svg+xml" href="https://drive.google.com/uc?export=view&id=1pubLxygehU_20FJlWSwux2sLpq0OMw-k" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Artisan Cove</title>
   <meta name="description" content="Aryan Sharma - A Full Stack Developer">
+  
+  <!-- Preload Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"></noscript>
 </head>
 
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Defer JavaScript to avoid render-blocking -->
+  <script type="module" src="/src/main.jsx" defer></script>
+  <script nomodule src="/src/main.jsx" defer></script>
 </body>
 
 </html>
