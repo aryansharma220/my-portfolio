@@ -212,5 +212,33 @@
     font-size: 1.4rem;
     margin-bottom: 2rem;
   }
+
+  .project-card-button{
+    padding: 0.6rem;
+
+    a{
+
+      span{
+
+        font-size: .7rem;
+      }
+    }
+  }
+
   
+}
+
+@media screen and (max-width: 300px) {
+
+  .project-card-button{
+    padding: 0.6rem;
+
+    a{
+
+      span{
+
+        font-size: .5rem;
+      }
+    }
+  }
 }

@@ -96,13 +96,24 @@
 
 
 @media screen and (max-width: 800px) {
+
+
+  .skills-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .skills-item{
     font-size: .5rem;
+    min-height: 10vh;
+    min-width: 10vw;
+    
   }
 
   .skills-item svg {
     font-size: 1.5rem;
   }
+
 
   .skills-heading{
     font-size: 2rem;
@@ -118,4 +129,12 @@
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
+}
+
+@media screen and (max-width: 360px) {
+  .skills-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
 }

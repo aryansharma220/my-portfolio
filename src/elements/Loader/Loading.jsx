@@ -11,9 +11,6 @@ const Loading = () => {
         <div className="core"></div>
         <div className="spin"></div>
       </div>
-      <div className="loader">
-        <span className="loader-text">Loading...</span>
-      </div>
     </div>
   );
 };

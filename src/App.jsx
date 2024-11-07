@@ -19,7 +19,7 @@ function App() {
 
   // Simulate a loading screen delay
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000);
+    const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
