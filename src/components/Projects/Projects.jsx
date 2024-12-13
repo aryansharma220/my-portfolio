@@ -2,6 +2,7 @@ import React from 'react';
 import './Projects.css';
 import onTheGo from '../../Assets/onTheGo.webp';
 import imageForge from '../../Assets/imageForge.webp';
+import cloudQuill from '../../Assets/cloudQuill.webp';
 
 const projectData = [
   {
