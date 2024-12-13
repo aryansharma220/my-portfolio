@@ -18,10 +18,17 @@
 
 
 .projects{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
-  /* gap: 2rem; */
+  display: flex;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .projects{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+  }
 }
 
 .project-card {
@@ -208,6 +215,11 @@
 }
 
 @media screen and (max-width: 400px) {
+
+  .projects{
+    gap: 2rem;
+  }
+
   .project-heading{
     font-size: 1.4rem;
     margin-bottom: 2rem;

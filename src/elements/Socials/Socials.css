@@ -209,6 +209,12 @@
   z-index: -1;
 }
 
+@media screen and (max-width: 350px) {
+  .heading::after {
+    width: 5em;
+    height: 5em;
+  }
+}
 
 .icons {
   display: grid;
