@@ -6,6 +6,16 @@ import imageForge from '../../Assets/imageForge.webp';
 const projectData = [
   {
     id: 1,
+    title: 'Cloud Quill',
+    description: 'A cloud-based collaborative document management platform.',
+    technologies: 'NextJS, TailwindCSS, ConvexDB, Liveblocks',
+    image: cloudQuill,
+    alt: 'Cloud Quill',
+    link: 'https://cloud-quill.vercel.app/',
+    linkText: 'Checkout Website'
+  },
+  {
+    id: 2,
     title: 'OnTheGo',
     description: 'A seamless travel application with optimized performance.',
     technologies: 'JavaScript, React, MongoDB',
@@ -15,7 +25,7 @@ const projectData = [
     linkText: 'Checkout Website'
   },
   {
-    id: 2,
+    id: 3,
     title: 'ImageForge',
     description: 'An AI-powered image generation platform.',
     technologies: 'ReactJS, OpenAI API',
