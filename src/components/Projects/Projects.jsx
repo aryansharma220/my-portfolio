@@ -4,17 +4,18 @@ import onTheGo from '../../Assets/onTheGo.webp';
 import imageForge from '../../Assets/imageForge.webp';
 import cloudQuill from '../../Assets/cloudQuill.webp';
 import wanderTrail from '../../Assets/wanderTrail.webp';
+import healNav from '../../Assets/healNav.webp';
 
 const projectData = [
   {
-      id: 1,
-      title: 'The Wander Trail',
-      description: 'A platform designed for AI-powered travel planning.',
-      technologies: 'React, Firebase, TypeScript, TailwindCSS, Shadcn UI',
-      image: wanderTrail,
-      alt: 'Wander Trail',
-      link: 'https://wander-trail.vercel.app/',
-      linkText: 'Checkout Website' 
+    id: 1,
+    title: 'The Wander Trail',
+    description: 'A platform designed for AI-powered travel planning.',
+    technologies: 'React, Firebase, TypeScript, TailwindCSS, Shadcn UI',
+    image: wanderTrail,
+    alt: 'Wander Trail',
+    link: 'https://wander-trail.vercel.app/',
+    linkText: 'Checkout website'
   },
   {
     id: 2,
@@ -24,17 +25,18 @@ const projectData = [
     image: cloudQuill,
     alt: 'Cloud Quill',
     link: 'https://cloud-quill.vercel.app/',
-    linkText: 'Checkout Website'
+    linkText: 'Explore Cloud Quill'
   },
   {
     id: 3,
-    title: 'OnTheGo',
-    description: 'A seamless travel application with optimized performance.',
-    technologies: 'JavaScript, React, MongoDB',
-    image: onTheGo,
-    alt: 'OnTheGo',
-    link: 'https://onthego-swcc.onrender.com/',
-    linkText: 'Checkout Website'
+    title: 'HealNav',
+    description: 'An AI-driven community health navigator for accessible healthcare solutions.',
+    technologies: 'React, Node.js, MongoDB, Gemini API',
+    image: healNav,
+    alt: 'HealNav',
+    link: 'https://healnav.vercel.app',
+    linkText: 'Explore HealNav'
+
   },
   {
     id: 4,
@@ -44,15 +46,25 @@ const projectData = [
     image: imageForge,
     alt: 'ImageForge',
     link: 'https://github.com/aryansharma220/ImageForge',
-    linkText: 'Checkout GitHub Repo'
-  }
+    linkText: 'Explore ImageForge'
+  },
+  {
+    id: 5,
+    title: 'OnTheGo',
+    description: 'A seamless travel application with optimized performance.',
+    technologies: 'JavaScript, React, MongoDB',
+    image: onTheGo,
+    alt: 'OnTheGo',
+    link: 'https://onthego-swcc.onrender.com/',
+    linkText: 'Explore OnTheGo'
+  },
 ];
 
 const Projects = () => {
   return (
     <div data-aos='zoom-out-up' id='projects' className="projects-section">
       <h2 className='project-heading'>Projects</h2>
-      <div className="projects" data-aos= 'zoom-in-up' >
+      <div className="projects" data-aos='zoom-in-up' >
         {projectData.map(project => (
           <div key={project.id} className="project-card">
             <div>
