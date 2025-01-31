@@ -27,5 +27,5 @@ const Card = ({title,description}) => {
     </div>
   );
 };
-z
+
 export default Card;
