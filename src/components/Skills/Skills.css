@@ -1,0 +1,129 @@
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  /* max-width: 1400px; */
+  width: 95%;
+  padding: 4rem 2rem;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.skills-heading {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  perspective: 1000px;
+}
+
+.skills-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(126, 59, 202, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.skills-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(126, 59, 202, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.skills-item:hover::before {
+  left: 100%;
+}
+
+.skills-item svg {
+  font-size: 2.5rem;
+  color: #7E3BCA;
+  transition: all 0.3s ease;
+}
+
+.skills-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #7E3BCA;
+  box-shadow: 0 5px 15px rgba(126, 59, 202, 0.3);
+}
+
+.skills-item:hover svg {
+  transform: scale(1.2) rotate(5deg);
+  color: #9d5be0;
+}
+
+.skill-name {
+  opacity: 0.8;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+}
+
+.skills-item:hover .skill-name {
+  opacity: 1;
+  transform: translateY(0);
+  color: #9d5be0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .skills-heading {
+    font-size: 2rem;
+  }
+
+  .skills-item {
+    padding: 1rem;
+  }
+
+  .skills-item svg {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .skills-section {
+    padding: 2rem 1rem;
+  }
+
+  .skills-heading {
+    font-size: 1.5rem;
+  }
+}

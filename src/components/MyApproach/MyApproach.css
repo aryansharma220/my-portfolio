@@ -1,0 +1,48 @@
+.approach-section{
+  margin: 2rem 3.8rem;
+  border-radius: 20px;
+  color: white;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.approach-heading{
+  font-size: 3.2rem;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.approach-cards-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px) {
+  .approach-heading{
+    font-size: 2rem;
+  }
+  
+}
+
+@media screen and (max-width: 550px) {
+  .approach-section{
+    margin: 2rem 0;
+  }
+
+  
+
+
+  .approach-heading{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
