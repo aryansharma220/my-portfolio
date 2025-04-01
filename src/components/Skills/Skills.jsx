@@ -20,25 +20,32 @@ import {
 
 import { IoGitBranchOutline } from "react-icons/io5";
 
-const skillIcons = {
-  Java: <FaJava />,
-  HTML: <FaHtml5 />,
-  CSS: <FaCss3Alt />,
-  TailwindCSS: <SiTailwindcss />,
-  Javascript: <FaJs />,
-  ReactJS: <FaReact />,
-  NextJS: <SiNextdotjs />,
-  NodeJS: <FaNodeJs />,
-  MongoDB: <SiMongodb />,
-  Firebase: <FaFire />,
-  Git: <IoGitBranchOutline />,
-  GitHub: <FaGithub />,
-  Postman: <SiPostman />,
-  'Gen AI': <FaRobot />,
+const skillsData = {
+  Java: { icon: <FaJava /> },
+  HTML: { icon: <FaHtml5 /> },
+  CSS: { icon: <FaCss3Alt /> },
+  TailwindCSS: { icon: <SiTailwindcss /> },
+  Javascript: { icon: <FaJs /> },
+  ReactJS: { icon: <FaReact /> },
+  NextJS: { icon: <SiNextdotjs /> },
+  NodeJS: { icon: <FaNodeJs /> },
+  MongoDB: { icon: <SiMongodb /> },
+  Firebase: { icon: <FaFire /> },
+  Git: { icon: <IoGitBranchOutline /> },
+  GitHub: { icon: <FaGithub /> },
+  Postman: { icon: <SiPostman /> },
+  'Gen AI': { icon: <FaRobot /> },
 };
 
 const Skills = () => {
-  const skills = Object.keys(skillIcons);
+  const skills = Object.entries(skillsData);
+
+  const renderSkillItem = (skill, index, key) => (
+    <li className='skills-item' key={key}>
+      {skill[1].icon}
+      <span className='skill-name'>{skill[0]}</span>
+    </li>
+  );
 
   return (
     <div data-aos='fade-up' id='skills' className='skills-section'>
@@ -46,20 +53,10 @@ const Skills = () => {
       <div className='skills-container'>
         <div className='skills-track'>
           <ul className='skills-list'>
-            {skills.map((skill, index) => (
-              <li className='skills-item' key={`first-${index}`}>
-                {skillIcons[skill]}
-                <span className='skill-name'>{skill}</span>
-              </li>
-            ))}
+            {skills.map((skill, index) => renderSkillItem(skill, index, `first-${index}`))}
           </ul>
           <ul className='skills-list'>
-            {skills.map((skill, index) => (
-              <li className='skills-item' key={`second-${index}`}>
-                {skillIcons[skill]}
-                <span className='skill-name'>{skill}</span>
-              </li>
-            ))}
+            {skills.map((skill, index) => renderSkillItem(skill, index, `second-${index}`))}
           </ul>
         </div>
       </div>
