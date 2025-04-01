@@ -43,21 +43,26 @@ const Skills = () => {
   return (
     <div data-aos='fade-up' id='skills' className='skills-section'>
       <h2 className='skills-heading'>Skills</h2>
-      <ul className='skills-list'>
-        {skills.map((skill, index) => (
-          <li
-            className='skills-item'
-            key={index}
-            style={{
-              animationDelay: `${index * 0.1}s`,
-              animation: 'float 3s ease-in-out infinite'
-            }}
-          >
-            {skillIcons[skill]}
-            <span className='skill-name'>{skill}</span>
-          </li>
-        ))}
-      </ul>
+      <div className='skills-container'>
+        <div className='skills-track'>
+          <ul className='skills-list'>
+            {skills.map((skill, index) => (
+              <li className='skills-item' key={`first-${index}`}>
+                {skillIcons[skill]}
+                <span className='skill-name'>{skill}</span>
+              </li>
+            ))}
+          </ul>
+          <ul className='skills-list'>
+            {skills.map((skill, index) => (
+              <li className='skills-item' key={`second-${index}`}>
+                {skillIcons[skill]}
+                <span className='skill-name'>{skill}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
