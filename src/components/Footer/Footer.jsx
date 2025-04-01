@@ -11,6 +11,7 @@ const Footer = () => {
         <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#skills">Skills</a></li>
         <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#myApproach">My Approach</a></li>
         <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#Certificates">Certifications</a></li>
+        <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#hackathons">Hackathons</a></li>
         <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#education">Education</a></li>
         <li className="nav-ul-li menu__item"><a className="a-shine menu__link" href="#contact">Contact</a></li>
       </ul>

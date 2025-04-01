@@ -9,7 +9,7 @@ import healNav from '../../Assets/healNav.webp';
 const projectData = [
   {
     id: 1,
-    title: 'The Wander Trail',
+    title: 'Wander Trail',
     description: 'A platform designed for AI-powered travel planning.',
     technologies: 'React, Firebase, TypeScript, TailwindCSS, Shadcn UI',
     image: wanderTrail,

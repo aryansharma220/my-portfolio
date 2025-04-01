@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, Suspense } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Loading from './elements/Loader/Loading';
 import { Analytics } from "@vercel/analytics/react"
+import Hackathon from './components/Hackathons/Hackathon';
 
 // Lazy load components
 const Hero = React.lazy(() => import('./components/Hero/Hero'));
@@ -76,6 +77,7 @@ function App() {
                 <Skills />
                 <MyApproach />
                 <Certificates />
+                <Hackathon />
                 <Education />
                 <Contact />
                 <Footer />
