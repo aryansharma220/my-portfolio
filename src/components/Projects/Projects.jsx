@@ -40,6 +40,16 @@ const projectData = [
   },
   {
     id: 4,
+    title: 'AI Digest',
+    description: 'An AI-powered digest generator that fetches, stores, and summarizes updates from GitHub, Hugging Face, and ArXiv in real-time.',
+    technologies: 'React, Node,js, Gemini, Firebase, MongoDB, Python',
+    image: aiDigest,
+    alt: 'AI Digest',
+    link: 'https://github.com/aryansharma220/ai-digest',
+    linkText: 'Explore AI Digest'
+  },
+  {
+    id: 5,
     title: 'ImageForge',
     description: 'An AI-powered image generation platform to unleash your creativity.',
     technologies: 'ReactJS, OpenAI API',
@@ -49,7 +59,7 @@ const projectData = [
     linkText: 'Explore ImageForge'
   },
   {
-    id: 5,
+    id: 6,
     title: 'OnTheGo',
     description: 'A seamless travel application with optimized performance.',
     technologies: 'JavaScript, React, MongoDB',
