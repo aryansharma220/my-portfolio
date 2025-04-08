@@ -5,6 +5,7 @@ import imageForge from '../../Assets/imageForge.webp';
 import cloudQuill from '../../Assets/cloudQuill.webp';
 import wanderTrail from '../../Assets/wanderTrail.webp';
 import healNav from '../../Assets/healNav.webp';
+import aiDigest from '../../Assets/aiDigest.webp';
 
 const projectData = [
   {
